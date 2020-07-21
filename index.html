@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Space Battle Game</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
-<body>
-    
+
+<body onload="startGame()">
+    <div id="image"></div>
+
+    <div class="logodiv">
+        <div>
+            <img class="logo" src="images/Capture.JPG">
+        </div>
+        <div class="logoText">
+            <h1>Space Battle Game</h1>
+        </div>
+        <div>
+            &nbsp;
+        </div>
+    </div>
+    <div class="show">
+
+        <div class="show1">
+            <label class="char">Schwarzenegger Ship</label>
+            <img id="heroShip" class="spaceShip" src="images/hero2.jpg">
+            <div class="icon">
+
+                <button id="heroAttackBtn" class="btn" onclick='heroAttack()'>Attack</button>
+                <button id="heroRetreatBtn" class="btn" onclick='heroRetreat()'>Retreat</button>
+            </div>
+        </div>
+        <div class="show1">
+            <img class="vsImg" src="images/vs.jpg">
+        </div>
+
+        <div class="show1">
+            <label class="char">Alien Ship</label>
+            <img id="alienShip" class="spaceShip" src="images/alien2.jpg">
+            <div class="icon1">
+
+                <button id="alienAttackBtn" class="btn" onclick='alienAttack()'>Attack</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="logger" style="width: 99%; height: 220px; overflow-y: scroll; border: solid;">
+    </div>
+    <div class="over">
+        <label id="gameOver" style="visibility: hidden;">The game is over. Thanks for playing!</label>
+    </div>
+    <div class="playOver">
+        <button id="btnAgain" class="btn" onclick="startGame()" style="visibility: hidden;">Play Again?</button>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/web.js"></script>
 </body>
+
 </html>

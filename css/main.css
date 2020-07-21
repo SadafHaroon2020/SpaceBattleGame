@@ -1,0 +1,164 @@
+*{
+    border: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#image {
+    content: "";
+    background: url('../images/bg.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.char{
+    color:rgb(27, 16, 128);
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightskyblue;
+}
+.show{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.show1{
+   text-align: center;
+   margin:0 auto;
+   width: 400px;
+}
+.icon{
+    
+    padding-bottom: 10px;
+}
+
+h1 {
+    color: rgb(0, 66, 0);
+    text-shadow: 1px 1px 5px lightgreen;
+    font-size: 2em;
+}
+.icon1{
+    
+    padding-bottom: 10px;
+    text-align: center;
+}
+button {
+    cursor: pointer;
+    justify-content: left;
+    padding: 12px 18px;
+    border-radius: 5px;
+    border: solid;
+}
+.spaceShip {
+    width: 350px;
+    height: 220px;
+    border: 7px solid transparent;
+    
+}
+.vsImg {
+    width: 100px;
+    height: 150px;
+    mix-blend-mode:color;
+}
+
+.logodiv {
+   display: grid;
+   grid-template-columns: 1fr 8fr 1fr;
+}
+
+.logo {
+    width: 120px;
+    height: 50px;
+    mix-blend-mode:multiply;
+}
+#logger p {
+    padding: 0.5;
+    font-style: italic;
+    color: rgb(24, 24, 104);
+    margin: 0;
+    border-bottom: 1px solid;
+}
+
+h1, h3 {
+    text-align: center;
+}
+.gameOver, .over{
+    text-align: center;
+    text-decoration-style: dashed;
+    font-size: 20px; 
+}
+.over{
+    padding-bottom: 10px;
+    animation: blink 1s linear infinite;
+}
+.playOver{
+    text-align: center;  
+}
+button:disabled {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, .2);
+}
+.btn{
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(43, 39, 39)
+}
+#btnAgain{
+    background-color: rgb(243, 43, 43);
+    color: snow;
+    animation: blinkBtn 1s linear infinite;
+}
+
+@keyframes blinkBtn{
+    0%{color: snow;}
+    50%{color: red;}
+    100%{color: snow;}
+    }
+
+#heroAttackBtn {
+    background-color: lightcoral ;  
+}
+
+#heroRetreatBtn {
+    background-color: lightyellow ;
+}
+
+#alienAttackBtn {
+    background-color: lightgreen;
+}
+/* Animation */
+
+@keyframes blink{
+0%{color: red;}
+50%{font-size: 20px;}
+100%{font-weight: bold;}
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 1200px) {
+    
+    .show{
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 600px) {
+  
+    .show{
+        flex-direction: column;
+    }
+    #image {
+        background-image: url('../images/bg.jpg');
+        height: 1200px;
+    }
+   
+}
+
